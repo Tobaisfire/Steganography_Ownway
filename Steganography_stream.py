@@ -1,8 +1,8 @@
 import streamlit as st
 from PIL import Image
 from stream_func import *
-import cv2
-import numpy as np
+from io import BytesIO
+
 st.set_page_config(layout="wide")
 st.title('Steganography')
 st.caption('A program to encode Text data into Image data !!!')
@@ -45,7 +45,6 @@ with col3:
         # result.save('Encoded.png')
         st.image(result)
         st.success('Encoded Completed')
-        from io import BytesIO
         buf = BytesIO()
         result.save(buf, format="png")
         byte_im = buf.getvalue()
