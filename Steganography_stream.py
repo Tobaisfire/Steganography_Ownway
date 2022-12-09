@@ -6,7 +6,7 @@ from io import BytesIO
 st.set_page_config(layout="wide")
 st.title('Steganography')
 st.caption('A program to encode Text data into Image data !!!')
-st.caption(f'Working directory: D:\keval\study\Python_exp\stream_stegano')
+
 col1, col2, col3 = st.columns(3)
 val = False
 vald = False
