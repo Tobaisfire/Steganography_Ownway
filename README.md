@@ -10,8 +10,7 @@ Steganography is the technique of hiding secret data within an ordinary, non-sec
 # Methodology
 
 1] Program takes Img and returns its pixel list in format of (R,G,B).
-        
-![image](https://user-images.githubusercontent.com/67000746/206679522-d5494a2c-edc8-4634-82b1-f51fa24269ee.png)
+  
 
   Size of img: (1280, 720)
 
