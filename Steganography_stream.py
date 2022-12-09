@@ -52,7 +52,7 @@ with col3:
         btn = st.download_button(
             label="Download image",
             data=byte_im,
-            file_name="flower.png",
+            file_name="Encoded.png",
             mime="image/png"
           )
       
