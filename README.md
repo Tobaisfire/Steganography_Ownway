@@ -37,9 +37,13 @@ i.e [ (R1,G1,B1) , (R2,G2,B2),.....]
 # How to run project -->
 
 1] Read requirements
+
 2] Run Steganography_stream.py
+
 3] Write text on text area and uplaod img to encode them click on button encode. Note( Download button for downloading encode img).
+
 4] Upload encoded img and click decode.
+
 5] Enjoy !!!!!!!!!!!!!!!!!!!!!!!!!
 
  
