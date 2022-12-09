@@ -1,12 +1,16 @@
 # Steganography_Ownway
 A progarm to encode text data into Image  with decoding Function.
 
+Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection; the secret data is then extracted at its destination. The use of steganography can be combined with encryption as an extra step for hiding or protecting data. The word steganography is derived from the Greek words steganos (meaning hidden or covered) and the Greek root graph (meaning to write).
+
+# Output
+
 ![image](https://user-images.githubusercontent.com/67000746/206674897-f9def5df-c526-4a70-b454-83f6c141b2ef.png)
 
 # Methodology
 
 1] Program takes Img and returns its pixel list in format of (R,G,B).
-    
+        
   Size of img: (1280, 720)
 
 Pixel format of above fig: 
@@ -28,6 +32,15 @@ i.e [ (R1,G1,B1) , (R2,G2,B2),.....]
    ![image](https://user-images.githubusercontent.com/67000746/206677567-28f5f9d5-5559-4306-92f2-7d3a1d6678fd.png)
    
 4] For decoding reverse the logic of encoding.
+
+
+# How to run project -->
+
+1] Read requirements
+2] Run Steganography_stream.py
+3] Write text on text area and uplaod img to encode them click on button encode. Note( Download button for downloading encode img).
+4] Upload encoded img and click decode.
+5] Enjoy !!!!!!!!!!!!!!!!!!!!!!!!!
 
  
   
