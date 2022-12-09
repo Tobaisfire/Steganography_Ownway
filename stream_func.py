@@ -1,7 +1,5 @@
 from PIL import Image
 
-
-# Fucntion to generate Binary format of given text to encode  
 def binary_func(n):      #optional You can use inbuit func bin() but some error will get raise try to slove it.                    
   n = ord(n)
 
@@ -16,22 +14,13 @@ def binary_func(n):      #optional You can use inbuit func bin() but some error 
 
   return binary.zfill(8)
 
-def convert_to_img(lis): 
-  by = []
-  for i in lis:
-    by.extend((list(i)))
-  data = bytes(by)
-  im = Image.frombytes("RGB", (1280, 720), data) # Change size accordinf to your img very IMP
-  return im
-
-
-def encode():
-  prompt_path = input('Enter path of img:- ')
-  prompt_text = input('Enter the text you want to encode:- \n') # Put your own path of img any random you want.
+def encode(text,img):
+  prompt_path = img
+  prompt_text = text # Put your own path of img any random you want.
   
   key = (len(prompt_text)*8)   # This is to generate key because this program change pixel values to encode.
-  with open('Key.txt', 'w') as wrt:
-    wrt.write(f" Your key is {key}")
+  with open('D:\keval\study\Python_exp\stream_stegano\Key.txt', 'w') as wrt:
+    wrt.write(f"{key}")
     print('key generated !')
   encoding_img = Image.open(prompt_path) 
   size = encoding_img.size
@@ -81,14 +70,28 @@ def encode():
     if (u+1)%3 == 0:
       pixel_new_list.append(tuple(temp))
       temp = []
+  output = []
+  output.append(pixel_new_list)
+  output.append(size)
+  return output
 
-  return pixel_new_list
 
 
-def decode():
+def convert_to_img(lis,size): 
+  by = []
+  for i in lis:
+    by.extend((list(i)))
+  data = bytes(by)
+  im = Image.frombytes("RGB", size , data) # Change size accordinf to your img very IMP
+
+  return im
+
+
+
+def decode(img,key):
     result = ''
-    prompt_path = input('Enter path of img:- ')
-    promt_len = int(input('Enter the key:- '))
+    prompt_path =img
+    promt_len = key
 
     decoding_img = Image.open(prompt_path)
 
@@ -116,25 +119,3 @@ def decode():
             res = ''
 
     return result
-            
-     
-    
-
-
-
-
-if __name__ == '__main__':
-    choice = int(input("If want to Encode into IMG Press 1\nIf Decode Encoded Img Press 2\n"))
-    if choice == 1:
-        lis = encode()
-        imm = convert_to_img(lis)
-        imm.save('Encoded.png')
-    else:
-        print((decode()))
-      
-
-
-
-
-
-
